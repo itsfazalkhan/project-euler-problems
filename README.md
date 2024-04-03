@@ -1,4 +1,4 @@
-# Project Euler Problem Solver
+# Project Euler Problems
 
 This repository contains Python solutions to various problems from the [Project Euler Archives](https://projecteuler.net/archives). Project Euler is a collection of challenging mathematical/computer programming problems that require more than just mathematical insights to solve.
 
