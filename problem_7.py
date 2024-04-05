@@ -11,17 +11,18 @@ def is_prime(number):
             return False  # If number is divisible by any number other than 1 and itself, it's not prime
     return True
 
-def find_10001st_prime():
+def find_n_prime(num):
     count = 0
     number = 2
     while True:
         if is_prime(number):
             count += 1
-            if count == 10001:
+            if count == num:
                 return number
         number += 1
 
 # Finding the 10,001st prime number
-prime_10001 = find_10001st_prime()
+n=1001
+x = find_n_prime(n)
 
-print("The 10,001st prime number is:", prime_10001)
+print(f"The {n} prime number is: {x}")
