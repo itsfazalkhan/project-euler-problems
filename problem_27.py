@@ -12,7 +12,7 @@ def is_prime(n):
         i += 6
     return True
 
-def consecutive_primes(a, b):
+def count_consecutive_primes(a, b):
     n = 0
     while True:
         value = n * n + a * n + b
@@ -21,17 +21,23 @@ def consecutive_primes(a, b):
         n += 1
     return n
 
-def main():
+def find_max_product(a_range, b_range):
     max_consecutive_primes = 0
     product = 0
 
-    for a in range(-999, 1000):
-        for b in range(-1000, 1001):
-            consecutive = consecutive_primes(a, b)
+    for a in range(*a_range):
+        for b in range(*b_range):
+            consecutive = count_consecutive_primes(a, b)
             if consecutive > max_consecutive_primes:
                 max_consecutive_primes = consecutive
                 product = a * b
 
+    return product
+
+def main():
+    a_range = (-999, 1000)
+    b_range = (-1000, 1001)
+    product = find_max_product(a_range, b_range)
     print("Product of coefficients:", product)
 
 if __name__ == "__main__":
